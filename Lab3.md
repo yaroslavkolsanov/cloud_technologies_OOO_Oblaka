@@ -17,7 +17,7 @@
 
 Содержимое yml-файла
 
-'''
+```
 name: Push to Docker hub
 
 on: 
@@ -44,4 +44,4 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.USER }}/lab3_test:latest
-'''
+```
