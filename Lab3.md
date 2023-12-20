@@ -17,4 +17,31 @@
 
 Содержимое yml-файла
 
-![Alt text](./images/workflow.png)
+'''
+name: Push to Docker hub
+
+on: 
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  push_to_docker_hub:
+    name: Push to Docker hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository 
+        uses: actions/checkout@v4
+      
+      - name: Login to Docker hub 
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ secrets.USER }}/lab3_test:latest
+'''
