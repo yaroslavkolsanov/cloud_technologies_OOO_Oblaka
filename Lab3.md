@@ -45,3 +45,7 @@ jobs:
           push: true
           tags: ${{ secrets.USER }}/lab3_test:latest
 ```
+
+3. После добавления и пуша необходимого кода в виде dockerfile и test.py в репозиторий, заходим сначала в actions, где видим, что все прошло успешно
+
+![Alt text](./images/actions.png)
