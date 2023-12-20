@@ -14,3 +14,7 @@
 
 ![Alt text](./images/get-token.png)
 ![Alt text](./images/access-token.png)
+
+Содержимое yml-файла
+
+![Alt text](./images/workflow.png)
